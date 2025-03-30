@@ -110,5 +110,21 @@ g++ algoritmosOrdenamiento.cpp -o algoritmosOrdenamiento.out
 ./algoritmosOrdenamiento.out
 ```
 ## Análisis de resultados
+<p align="justify">
+Para poder comparar el rendimiento de los 7 algoritmos se calcularon los tiempos de ejecución promedio de cada algoritmo para los 100 tamaños de arreglo distintos y se almacenaron todos en un solo archivo llamado Tiempos_Promedio.csv, el cual se encuentra en la carpeta Datos_Experimentales. A continuación se presentan algunas gráficas de dichos datos para diferentes rangos de tamaño de arreglo.
+</p>
+
+<p align="center">
+<img src="https://github.com/user-attachments/assets/93035230-61ab-4231-a399-549db5fb87ec" width=70%>
+</p>
+
+<p align="justify">
+En esta gráfica se puede observar que el algoritmo de ordenamiento burbuja tiene un tiempo de ejecución similar a los demás algoritmos para arreglos de tamaño menor o igual a 30, pero una vez que el tamaño del arreglo supera los 30 elementos su tiempo de ejecución crece a un ritmo mucho mayor que el de los demás algoritmos. Por otro lado, se puede observar que el algoritmo de inserción es el más rápido para arreglos de tamaño menor o igual a 100.
+</p>
+
+<p align="center">
+<img src="https://github.com/user-attachments/assets/6b503342-8257-4c41-a777-44b5b2317643" width=70%>
+</p>
 
 ## Conclusiones
+
