@@ -18,24 +18,37 @@ Todos tienen como entrada y salida:
 - Salida: El arreglo $s$ con sus elementos ordenados de manera no decreciente.
 
 ### 1. Inserción por Orden
+<p align="justify">
+El algoritmo de inserción por orden inicia comparando el segundo elemento del arreglo con el primero. Si el segundo elemento es menor que el primero, sus valores son intercambiados y como resultado los primeros dos elementos del arreglo están en orden no decreciente. La idea del algoritmo es ir aumentando gradualmente la sección del arreglo que va quedando en orden no decreciente, esto mediante la inserción de cada elemento en su posición correcta con respecto a los elementos previos. Cuando el último elemento ha sido insertado en su posición correcta, entonces el arreglo completo está en orden no decreciente.
+</p>
 El pseudocódigo que se siguió para implementar este algoritmo es el siguiente:
+
 <p align="center">
 <img src="https://github.com/user-attachments/assets/b935590c-c24f-4b7a-9a94-8aa27c10658e" width=75%>
 </p>
 
 ### 2. Ordenamiento Burbuja
+<p align="justify">
+El algoritmo de ordenamiento burbuja es un método simple que recorre repetidamente un arreglo, compara elementos adyacentes y los intercambia si están en el orden incorrecto.
+</p>
 El pseudocódigo que se siguió para implementar este algoritmo es el siguiente:
 <p align="center">
 <img src="https://github.com/user-attachments/assets/6bc54a35-0c57-4336-bc1b-d4871403d072" width=75%>
 </p>
 
 ### 3. Ordenamiento por Selección
+<p align="justify">
+El algoritmo de ordenamiento por selección es un método que divide el arreglo de entrada en dos partes: un subarreglo ya ordenado y un subarreglo por ordenar. El algoritmo busca repetidamente el elemento mínimo de la parte no ordenada y lo coloca al final de la parte ordenada.
+</p>
 El pseudocódigo que se siguió para implementar este algoritmo es el siguiente:
 <p align="center">
 <img src="https://github.com/user-attachments/assets/39971c19-0f07-4bb4-9217-6fd741365de6" width=75%>
 </p>
 
 ### 4. Ordenamiento por Mezcla
+<p align="justify">
+El algoritmo de ordenamiento por mezcla divide el arreglo en mitades recursivamente hasta obtener subarreglos de tamaño 1, que son trivialmente ordenados. Luego combina estos subarreglos para producir nuevos subarreglos ordenados hasta que solo queda un arreglo completamente ordenado.
+</p>
 El pseudocódigo que se siguió para implementar este algoritmo es el siguiente:
 <p align="center">
 <img src="https://github.com/user-attachments/assets/a669d363-4312-46aa-9b2b-543161b503ba" width=75%>
@@ -43,22 +56,40 @@ El pseudocódigo que se siguió para implementar este algoritmo es el siguiente:
 </p>
 
 ### 5. Ordenamiento Rápido
+<p align="justify">
+El algoritmo de ordenamiento rápido selecciona un elemento como pivote y particiona el arreglo alrededor del pivote, colocando todos los elementos menores al pivote a su
+izquierda y todos los mayores a su derecha. Luego, recursivamente ordena los dos subarreglos resultantes.
+</p>
 El pseudocódigo que se siguió para implementar este algoritmo es el siguiente:
 <p align="center">
 <img src="https://github.com/user-attachments/assets/d5dda71b-eba8-4fb9-8e89-e6ca9e875b61" width=75%>
 </p>
 
 ### 6. Ordenamiento por Montículos
+<p align="justify">
+El algoritmo de ordenamiento por montículos utiliza una estructura de datos llamada montículo para ordenar los elementos. Un montículo es un árbol binario casi completo que satisface la propiedad de montículo: en un montículo máximo, para cualquier nodo, el valor del nodo es mayor o igual que los valores de sus hijos.
+   
+El algoritmo consta de dos fases principales:
+
+1. Construcción del montículo máximo: reorganizar el arreglo para formar un montículo máximo.
+2. Extracción repetida del máximo: extraer repetidamente el elemento máximo del montículo y reubicarlo al final del arreglo.
+</p>
 El pseudocódigo que se siguió para implementar este algoritmo es el siguiente:
 <p align="center">
 <img src="https://github.com/user-attachments/assets/06845440-5eab-4376-83bf-9813e4f7b006" width=75%>
 </p>
 
 ### 7. Ordenamiento Shell
+<p align="justify">
+El algoritmo de ordenamiento Shell es una extensión del algoritmo de ordenamiento por inserción que supera algunas de sus limitaciones al permitir el intercambio de elementos distantes. El algoritmo mejora el rendimiento del ordenamiento por inserción al ordenar elementos separados por una cierta distancia (o gap), reduciendo progresivamente esta distancia hasta que el gap sea 1, mo-
+mento en el cual el algoritmo se comporta como el ordenamiento por inserción estándar. La idea principal es permitir que los elementos “salten” varias posiciones, haciendo que la lista se vuelva “parcialmente ordenada”, lo que hace que el ordenamiento por inserción final sea más eficiente.
+</p>
 El pseudocódigo que se siguió para implementar este algoritmo es el siguiente:
 <p align="center">
 <img src="https://github.com/user-attachments/assets/70e371d7-fba8-4eea-a956-f5152f90541a" width=75%>
 </p>
+
+El rendimiento de este algoritmo se ve afectado por la secuencia de gaps utilizada. En este proyecto la secuencia de gaps que se utiliza es la secuencia original de Shell: $\lfloor n/2 \rfloor, \lfloor n/4 \rfloor, \lfloor n/8 \rfloor,...,1$.
 
 ## Requisitos del sistema
 Las características del sistema en el que se compiló y ejecutó el código son las siguientes:
