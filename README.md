@@ -99,7 +99,7 @@ El rendimiento de este algoritmo se ve afectado por la secuencia de gaps utiliza
 Las características del sistema en el que se compiló y ejecutó el código son las siguientes:
 - Sistema Operativo: Fedora Linux 41 (Workstation Edition)
 - Procesador: AMD Ryzen 5 5600H
-- RAM: 16.0 GiB tipo DDR4
+- RAM: 16.0 GB tipo DDR4
 - Disco: SSD de 520 GB
 - Compilador: g++ (GCC) 14.2.1 20250110 (Red Hat 14.2.1-7)
   
