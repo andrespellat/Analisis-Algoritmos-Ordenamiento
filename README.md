@@ -19,7 +19,7 @@ Todos tienen como entrada y salida:
 
 ### 1. Inserción por Orden
 <p align="justify">
-El algoritmo de inserción por orden inicia comparando el segundo elemento del arreglo con el primero. Si el segundo elemento es menor que el primero, sus valores son intercambiados y como resultado los primeros dos elementos del arreglo están en orden no decreciente. La idea del algoritmo es ir aumentando gradualmente la sección del arreglo que va quedando en orden no decreciente, esto mediante la inserción de cada elemento en su posición correcta con respecto a los elementos previos. Cuando el último elemento ha sido insertado en su posición correcta, entonces el arreglo completo está en orden no decreciente.
+El algoritmo de inserción por orden inicia comparando el segundo elemento del arreglo con el primero. Si el segundo elemento es menor que el primero, sus valores son intercambiados y como resultado los primeros dos elementos del arreglo están en orden no decreciente. La idea del algoritmo es ir aumentando gradualmente la sección del arreglo que va quedando en orden no decreciente, esto mediante la inserción de cada elemento en su posición correcta con respecto a los elementos previos. Cuando el último elemento ha sido insertado en su posición correcta, entonces el arreglo completo está en orden no decreciente. La complejidad temporal del caso promedio para este algoritmo es $O(n²)$.
 </p>
 El pseudocódigo que se siguió para implementar este algoritmo es el siguiente:
 
@@ -29,7 +29,7 @@ El pseudocódigo que se siguió para implementar este algoritmo es el siguiente:
 
 ### 2. Ordenamiento Burbuja
 <p align="justify">
-El algoritmo de ordenamiento burbuja es un método simple que recorre repetidamente un arreglo, compara elementos adyacentes y los intercambia si están en el orden incorrecto.
+El algoritmo de ordenamiento burbuja es un método simple que recorre repetidamente un arreglo, compara elementos adyacentes y los intercambia si están en el orden incorrecto. La complejidad temporal del caso promedio para este algoritmo es $O(n²)$.
 </p>
 El pseudocódigo que se siguió para implementar este algoritmo es el siguiente:
 <p align="center">
@@ -38,7 +38,7 @@ El pseudocódigo que se siguió para implementar este algoritmo es el siguiente:
 
 ### 3. Ordenamiento por Selección
 <p align="justify">
-El algoritmo de ordenamiento por selección es un método que divide el arreglo de entrada en dos partes: un subarreglo ya ordenado y un subarreglo por ordenar. El algoritmo busca repetidamente el elemento mínimo de la parte no ordenada y lo coloca al final de la parte ordenada.
+El algoritmo de ordenamiento por selección es un método que divide el arreglo de entrada en dos partes: un subarreglo ya ordenado y un subarreglo por ordenar. El algoritmo busca repetidamente el elemento mínimo de la parte no ordenada y lo coloca al final de la parte ordenada. La complejidad temporal del caso promedio para este algoritmo es $O(n²)$.
 </p>
 El pseudocódigo que se siguió para implementar este algoritmo es el siguiente:
 <p align="center">
@@ -47,7 +47,7 @@ El pseudocódigo que se siguió para implementar este algoritmo es el siguiente:
 
 ### 4. Ordenamiento por Mezcla
 <p align="justify">
-El algoritmo de ordenamiento por mezcla divide el arreglo en mitades recursivamente hasta obtener subarreglos de tamaño 1, que son trivialmente ordenados. Luego combina estos subarreglos para producir nuevos subarreglos ordenados hasta que solo queda un arreglo completamente ordenado.
+El algoritmo de ordenamiento por mezcla divide el arreglo en mitades recursivamente hasta obtener subarreglos de tamaño 1, que son trivialmente ordenados. Luego combina estos subarreglos para producir nuevos subarreglos ordenados hasta que solo queda un arreglo completamente ordenado. La complejidad temporal del caso promedio para este algoritmo es $O(n\log n)$.
 </p>
 El pseudocódigo que se siguió para implementar este algoritmo es el siguiente:
 <p align="center">
@@ -58,7 +58,7 @@ El pseudocódigo que se siguió para implementar este algoritmo es el siguiente:
 ### 5. Ordenamiento Rápido
 <p align="justify">
 El algoritmo de ordenamiento rápido selecciona un elemento como pivote y particiona el arreglo alrededor del pivote, colocando todos los elementos menores al pivote a su
-izquierda y todos los mayores a su derecha. Luego, recursivamente ordena los dos subarreglos resultantes.
+izquierda y todos los mayores a su derecha. Luego, recursivamente ordena los dos subarreglos resultantes. La complejidad temporal del caso promedio para este algoritmo es $O(n\log n)$.
 </p>
 El pseudocódigo que se siguió para implementar este algoritmo es el siguiente:
 <p align="center">
@@ -73,6 +73,8 @@ El algoritmo consta de dos fases principales:
 
 1. Construcción del montículo máximo: reorganizar el arreglo para formar un montículo máximo.
 2. Extracción repetida del máximo: extraer repetidamente el elemento máximo del montículo y reubicarlo al final del arreglo.
+
+La complejidad temporal del caso promedio para este algoritmo es $O(n\log n)$.
 </p>
 El pseudocódigo que se siguió para implementar este algoritmo es el siguiente:
 <p align="center">
@@ -89,7 +91,9 @@ El pseudocódigo que se siguió para implementar este algoritmo es el siguiente:
 <img src="https://github.com/user-attachments/assets/70e371d7-fba8-4eea-a956-f5152f90541a" width=75%>
 </p>
 
-El rendimiento de este algoritmo se ve afectado por la secuencia de gaps utilizada. En este proyecto la secuencia de gaps que se utiliza es la secuencia original de Shell: $\lfloor n/2 \rfloor, \lfloor n/4 \rfloor, \lfloor n/8 \rfloor,...,1$.
+<p align="justify">
+El rendimiento de este algoritmo se ve afectado por la secuencia de gaps utilizada. En este proyecto la secuencia de gaps que se utiliza es la secuencia original de Shell: $\lfloor n/2 \rfloor, \lfloor n/4 \rfloor, \lfloor n/8 \rfloor,...,1$. La complejidad temporal del caso promedio para este algoritmo está generalmente entre $O(n\log² n)$ y $O(n^{5/4})$  dependiendo de la secuencia de gaps utilizada.
+</p>
 
 ## Requisitos del sistema
 Las características del sistema en el que se compiló y ejecutó el código son las siguientes:
@@ -119,12 +123,43 @@ Para poder comparar el rendimiento de los 7 algoritmos se calcularon los tiempos
 </p>
 
 <p align="justify">
-En esta gráfica se puede observar que el algoritmo de ordenamiento burbuja tiene un tiempo de ejecución similar a los demás algoritmos para arreglos de tamaño menor o igual a 30, pero una vez que el tamaño del arreglo supera los 30 elementos su tiempo de ejecución crece a un ritmo mucho mayor que el de los demás algoritmos. Por otro lado, se puede observar que el algoritmo de inserción es el más rápido para arreglos de tamaño menor o igual a 100.
+En esta gráfica se puede observar que el algoritmo de ordenamiento burbuja tiene un tiempo de ejecución similar a los demás algoritmos para arreglos de tamaño menor o igual a 30, pero una vez que el tamaño del arreglo supera los 30 elementos su tiempo de ejecución se separa cada vez más del resto, lo cual indica que el ritmo al que su tiempo de ejecución incrementa es el mayor de todos los algoritmos puestos a prueba. Por otro lado, se puede observar que el algoritmo de inserción es el más rápido para arreglos de tamaño menor o igual a 100.
+</p>
+
+<p align="center">
+<img src="https://github.com/user-attachments/assets/507509e9-2217-416d-9220-8e31464ca3dc" width=70%>
+</p>
+
+<p align="justify">
+En esta gráfica se puede observar que una vez que el tamaño del arreglo supera los 110 elementos el tiempo de ejecución del algoritmo de ordenamiento por selección queda únicamente por debajo del de ordenamiento burbuja, teniendo ambas curvas una forma similar.
+</p>
+
+<p align="center">
+<img src="https://github.com/user-attachments/assets/5f85f305-9c14-4f1b-8ba2-ba3911b5882b" width=70%>
+</p>
+
+<p align="justify">
+En esta gráfica se puede observar que una vez que el tamaño del arreglo supera los 300 elementos el tiempo de ejecución del algoritmo de inserción es el tercero más alto, quedando por debajo del de ordenamiento por selección.
 </p>
 
 <p align="center">
 <img src="https://github.com/user-attachments/assets/6b503342-8257-4c41-a777-44b5b2317643" width=70%>
 </p>
 
-## Conclusiones
+<p align="justify">
+En esta gráfica se puede observar que una vez que el tamaño del arreglo supera los 300 elementos el tiempo de ejecución de los algoritmos puestos a prueba sigue el siguiente orden de más rápido a más lento:
+   
+1. Ordenamiento Rápido
+2. Ordenamiento Shell
+3. Ordenamiento por Mezcla
+4. Ordenamiento por Montículos
+5. Inserción por Orden
+6. Ordenamiento por Selección
+7. Ordenamiento Burbuja
+   
+</p>
 
+## Conclusiones
+<p align="justify">
+Los resultados obtenidos sirven como confirmación de que los algoritmos de complejidad temporal de $O(n²)$  (Inserción, Selección y Burbuja) son mucho menos eficientes para ordenar arreglos de grandes tamaños a comparación de los de $O(n\log n)$  (Rápido, Shell, Mezcla y Montículos). Sin embargo, esto no significa que siempre que se necesite ordenar un arreglo lo mejor sea utilizar un algoritmo de orden $O(n\log n)$, también es necesario tomar en cuenta la complejidad espacial de los algoritmos, la cual no se puso a prueba en este proyecto, y considerar que para arreglos de tamaño pequeño los algoritmos de orden $O(n²)$ también tienen buenos tiempos de ejecución.
+</p>
