@@ -156,7 +156,8 @@ En esta gráfica se puede observar que una vez que el tamaño del arreglo supera
 5. Inserción por Orden
 6. Ordenamiento por Selección
 7. Ordenamiento Burbuja
-   
+
+Además, la forma que tienen las curvas de tiempo de ejecución obtenidas para cada algoritmo coinciden con la complejidad temporal teórica de cada uno de ellos: Se obtuvo una curva de forma cuadrática para los algoritmos de complejidad temporal de $O(n²)$  (Inserción, Selección y Burbuja) y una curva de forma lineal-logarítmica para los de $O(n\log n)$  (Rápido, Shell, Mezcla y Montículos).
 </p>
 
 ## Conclusiones
